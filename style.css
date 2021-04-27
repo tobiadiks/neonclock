@@ -1,56 +1,79 @@
-*
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: monospace;
-  
+
 }
 
-body
-{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: #0F1233;
+  flex-direction: column;
 }
 
-#clock
-{
+#switch {
+  position: relative;
+  background-color: #FFFFFF;
+  margin-bottom: 30px;
+  border-radius: 30px;
+  width: 70px;
+  height: 40px;
+
+}
+
+#switch #button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  position: absolute;
+  background-color: #0F1233;
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  left: 5px;
+  top: 5px;
+  font-size: 8px;
+  color: #FCFDFF;
+  transition: 0.5s;
+}
+
+
+#clock {
   font-size: 25px;
   text-transform: uppercase;
   color: white;
   text-align: center;
 }
 
-#clock #time 
-{
+#clock #time {
   display: flex;
   margin-top: 20px;
   justify-content: center;
 }
 
-#clock #time div
-{
+#clock #time div {
   display: flex;
   flex-direction: column;
   font-size: 18px;
   justify-content: space-around;
   align-items: center;
-  margin: 3px;
+  margin: 1px;
   background-color: #434FDA;
   padding: 20px;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+  border-radius: 1px;
 }
 
-#clock #time div span:nth-child(2)
-{
+#clock #time div span:nth-child(2) {
   font-size: 10px;
-  
 }
 
-#clock #time div:last-child
-{
+#clock #time div:last-child {
   background-color: #E17213;
 }

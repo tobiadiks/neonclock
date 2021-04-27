@@ -1,37 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Neon Clock</title>
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
-  </head>
-  <body>
-    <div id="clock">
-      The Time Now Is
-      <div id="time">
-        <div id="hour"><span id="h">00</span><span>Hour</span>
-        </div>
-        <div id="minute"><span id="m">00</span><span>Minute</span>
-        </div>
-        <div id="second"><span id="s">00</span><span>Seconds</span>
-        </div>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Neon Clock</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+
+<body id="body">
+  <div id="switch">
+    <div onclick="switchMode()" id="button">Dark
+    </div>
+  </div>
+  <div id="clock">
+    The Time Now Is
+    <div id="time">
+      <div id="hour"><span id="h">00</span><span>Hour</span>
+      </div>
+      <div id="minute"><span id="m">00</span><span>Minute</span>
+      </div>
+      <div id="second"><span id="s">00</span><span>Seconds</span>
       </div>
     </div>
+  </div>
+<script type="text/javascript" charset="utf-8">
+  function time() {
+    let h = document.getElementById('h');
+    let m = document.getElementById('m');
+    let s = document.getElementById('s');
+
+    h.innerHTML = (new Date().getHours());
+    m.innerHTML = (new Date().getMinutes());
+    s.innerHTML = (new Date().getSeconds());
+  }
+
+  setInterval(time, 1000);
+
+
+    let switchh = document.getElementById("switch");
+    let button = document.getElementById("button");
+
+
+  function switchMode() {
+    if (button.innerHTML = "Dark") {
+      button.style.left = "35px";
+      button.style.background = "#e17219";
+      button.innerHTML = "Light";
+    }
+
+    else {
+      button.style.left = "5px";
+      button.style.background = "#0f1233";
+      button.innerHTML = "Dark"
+    }
     
-    <script type="text/javascript" charset="utf-8">
-      function time (){
-       let h=document.getElementById('h');
-       let m=document.getElementById('m');
-      let  s=document.getElementById('s');
-      
-        h.innerHTML=(new Date().getHours());
-        m.innerHTML=(new Date().getMinutes());
-        s.innerHTML=(new Date().getSeconds());
-      }
-      
-      setInterval (time,1000);
-      
-    </script>
     
-  </body>
+
+  }
+</script>
+
+</body>
 </html>
