@@ -1,0 +1,56 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  
+}
+
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0F1233;
+}
+
+#clock
+{
+  font-size: 25px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+#clock #time 
+{
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+#clock #time div
+{
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3px;
+  background-color: #434FDA;
+  padding: 20px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+}
+
+#clock #time div span:nth-child(2)
+{
+  font-size: 10px;
+  
+}
+
+#clock #time div:last-child
+{
+  background-color: #E17213;
+}
