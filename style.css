@@ -13,7 +13,9 @@ body {
   min-height: 100vh;
   background-color: #0F1233;
   flex-direction: column;
+  transition: 1s;
 }
+
 
 #switch {
   position: relative;
@@ -22,7 +24,7 @@ body {
   border-radius: 30px;
   width: 70px;
   height: 40px;
-
+  box-shadow: 0 0 10px 1px #B1B1B1;
 }
 
 #switch #button {
@@ -49,6 +51,7 @@ body {
   text-transform: uppercase;
   color: white;
   text-align: center;
+  transition: 1s;
 }
 
 #clock #time {
@@ -68,6 +71,7 @@ body {
   padding: 20px;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
   border-radius: 1px;
+  color: white;
 }
 
 #clock #time div span:nth-child(2) {

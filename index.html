@@ -39,19 +39,26 @@
 
     let switchh = document.getElementById("switch");
     let button = document.getElementById("button");
+    let bodyc=document.getElementById("body");
+   let colo =  document.getElementById("clock");
 
 
   function switchMode() {
-    if (button.innerHTML = "Dark") {
+    
+    if (button.innerHTML == "Dark") {
       button.style.left = "35px";
       button.style.background = "#e17219";
       button.innerHTML = "Light";
+      bodyc.style.background ="#fff";
+      clock.style.color = "black"
     }
 
     else {
       button.style.left = "5px";
       button.style.background = "#0f1233";
       button.innerHTML = "Dark"
+      bodyc.style.background = "#0f1233";
+      clock.style.color = "white"
     }
     
     
